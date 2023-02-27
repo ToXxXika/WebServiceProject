@@ -5,13 +5,16 @@ import com.example.blockchain.Models.Utilisateur;
 import com.example.blockchain.Services.UtilisateurService;
 import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Controller;
 
 import java.util.List;
 
 
 @Path("/user")
+@Controller
 public class UtilisateurController {
 
     @Autowired
@@ -31,13 +34,13 @@ public class UtilisateurController {
         return utilisateurService.addUtilisateur(utilisateur);
     }
 
-    @DELETE
+/*    @DELETE
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_JSON)
     @Path("/delete/{id}")
     public boolean deleteUtilisateur(@Param("id") int id){
         return utilisateurService.deleteUtilisateur(id);
-    }
+    }*/
 
 
 

@@ -24,9 +24,9 @@ public class UtilisateurService {
         return utilisateurRepository.save(utilisateur);
     }
 
-    public boolean deleteUtilisateur(int id) {
+   /* public boolean deleteUtilisateur(int id) {
         utilisateurRepository.deleteById(id);
         return true;
-    }
+    }*/
 
 }

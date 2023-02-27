@@ -7,6 +7,8 @@ import com.example.blockchain.Repositories.CommandeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class CommandeService  {
     @Autowired
@@ -20,6 +22,9 @@ public class CommandeService  {
         }catch (Exception e){
             return false;
         }
+    }
+    public List<Commande> getCommandes(){
+        return commandeRepository.findAll();
     }
 
 
